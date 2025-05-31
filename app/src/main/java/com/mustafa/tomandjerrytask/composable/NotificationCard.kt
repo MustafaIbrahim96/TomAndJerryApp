@@ -3,9 +3,13 @@ package com.mustafa.tomandjerrytask.composable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -16,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -29,23 +34,21 @@ import com.mustafa.tomandjerrytask.ui.theme.NotificationBackGround
 
 @Composable
 fun NotificationCard(notificationCount: Int) {
-    Box(
-        modifier = Modifier.padding(6.dp)
-    ) {
+    Box(modifier = Modifier.padding()) {
         Box(
             modifier = Modifier
+                .padding(top = 4.dp, end = 1.dp)
                 .border(
-                    width = 0.4.dp,
+                    width = 0.8.dp,
                     color = NotificationBackGround,
                     shape = RoundedCornerShape(12.dp)
                 )
                 .clip(RoundedCornerShape(12.dp))
-                .padding(8.dp)
         ) {
             Icon(
                 imageVector = ImageVector.vectorResource(R.drawable.ic_notification),
                 contentDescription = "Notifications",
-                modifier = Modifier.size(24.dp)
+                modifier = Modifier.padding(all = 8.dp)
             )
         }
 
@@ -53,7 +56,6 @@ fun NotificationCard(notificationCount: Int) {
             Box(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .offset(x = 4.dp, y = (-4).dp)
                     .size(14.dp)
                     .clip(CircleShape)
                     .background(DarkBlue),
@@ -63,9 +65,11 @@ fun NotificationCard(notificationCount: Int) {
                     text = notificationCount.toString(),
                     color = Color.White,
                     fontSize = 10.sp,
-                    fontWeight = FontWeight.W500,
+                    fontWeight = FontWeight.W600,
                     fontFamily = IBMPlexSansArabic,
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .offset(y = (-4).dp).size(14.dp)
                 )
             }
         }

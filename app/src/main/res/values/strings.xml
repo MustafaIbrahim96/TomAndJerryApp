@@ -2,4 +2,6 @@
     <string name="app_name">TomAndJerryTask</string>
     <string name="hi_jerry">Hi, Jerry 👋🏻</string>
     <string name="which_tom_do_you_want_to_buy">Which Tom do you want to buy?</string>
+    <string name="buy_1_tom_and_get_2_for_free">Buy 1 Tom and get 2 for free</string>
+    <string name="cheap_tom_section">Cheap tom section</string>
 </resources>

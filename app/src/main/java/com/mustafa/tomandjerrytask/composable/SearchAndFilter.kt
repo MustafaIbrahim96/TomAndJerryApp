@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,26 +27,27 @@ import com.mustafa.tomandjerrytask.ui.theme.IBMPlexSansArabic
 import com.mustafa.tomandjerrytask.ui.theme.SearchIconColor
 
 @Composable
-fun SearchAndFilter(){
+fun SearchAndFilter() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 12.dp),
+            .padding(top = 12.dp)
+            .padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically
 
     ) {
         SearchBar(modifier = Modifier.weight(272f))
 
-        Box (modifier = Modifier
-            .weight(48f)
-            .clip(shape = RoundedCornerShape(12.dp))
-            .background(
-                DarkBlue
-            )) {
+        Card(
+            modifier = Modifier
+                .weight(48f)
+                .clip(shape = RoundedCornerShape(12.dp)),
+            colors = CardDefaults.cardColors(DarkBlue),
+        ) {
             Icon(
                 modifier = Modifier
                     .padding(12.dp)
-                    .align(Alignment.Center),
+                    .align(Alignment.CenterHorizontally),
                 painter = painterResource(R.drawable.ic_filter),
                 tint = Color.White,
                 contentDescription = "search icon"
@@ -55,6 +58,6 @@ fun SearchAndFilter(){
 
 @Preview
 @Composable
-fun PreviewSearchAndFilter(){
+fun PreviewSearchAndFilter() {
     SearchAndFilter()
 }
