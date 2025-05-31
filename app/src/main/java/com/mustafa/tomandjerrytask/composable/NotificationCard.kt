@@ -8,8 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,19 +24,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mustafa.tomandjerrytask.R
 import com.mustafa.tomandjerrytask.ui.theme.IBMPlexSansArabic
-import com.mustafa.tomandjerrytask.ui.theme.darkBlue
-import com.mustafa.tomandjerrytask.ui.theme.notificationBackGround
+import com.mustafa.tomandjerrytask.ui.theme.DarkBlue
+import com.mustafa.tomandjerrytask.ui.theme.NotificationBackGround
 
 @Composable
-fun NotificationBellIcon(notificationCount: Int) {
+fun NotificationCard(notificationCount: Int) {
     Box(
-        modifier = Modifier.padding(8.dp)
+        modifier = Modifier.padding(6.dp)
     ) {
         Box(
             modifier = Modifier
                 .border(
                     width = 0.4.dp,
-                    color = notificationBackGround,
+                    color = NotificationBackGround,
                     shape = RoundedCornerShape(12.dp)
                 )
                 .clip(RoundedCornerShape(12.dp))
@@ -58,7 +56,7 @@ fun NotificationBellIcon(notificationCount: Int) {
                     .offset(x = 4.dp, y = (-4).dp)
                     .size(14.dp)
                     .clip(CircleShape)
-                    .background(darkBlue),
+                    .background(DarkBlue),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -76,6 +74,6 @@ fun NotificationBellIcon(notificationCount: Int) {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewNotificationBellIcon() {
-    NotificationBellIcon(notificationCount = 3)
+fun PreviewNotificationCard() {
+    NotificationCard(notificationCount = 3)
 }

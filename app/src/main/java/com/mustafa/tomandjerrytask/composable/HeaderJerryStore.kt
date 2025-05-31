@@ -24,15 +24,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mustafa.tomandjerrytask.R
 import com.mustafa.tomandjerrytask.ui.theme.IBMPlexSansArabic
-import com.mustafa.tomandjerrytask.ui.theme.grayColor
+import com.mustafa.tomandjerrytask.ui.theme.GrayColor
 
 @Composable
-fun HeaderJerryStore(){
-    Row(modifier = Modifier.fillMaxWidth(),
+fun HeaderJerryStore() {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Row{
+        Row {
             Image(
                 modifier = Modifier
                     .size(48.dp)
@@ -52,16 +53,16 @@ fun HeaderJerryStore(){
                     text = stringResource(R.string.which_tom_do_you_want_to_buy),
                     fontFamily = IBMPlexSansArabic, fontWeight = W400,
                     fontSize = 14.sp,
-                    color = grayColor
+                    color = GrayColor
                 )
             }
         }
-        NotificationBellIcon(3)
+        NotificationCard(3)
     }
 }
 
 @Preview
 @Composable
-fun PreviewHeaderJerryStore(){
+fun PreviewHeaderJerryStore() {
     HeaderJerryStore()
 }

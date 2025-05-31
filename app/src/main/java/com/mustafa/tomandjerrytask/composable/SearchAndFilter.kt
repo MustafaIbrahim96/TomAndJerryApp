@@ -1,16 +1,11 @@
-package com.mustafa.tomandjerrytask.screens
+package com.mustafa.tomandjerrytask.composable
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
-
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,29 +20,41 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mustafa.tomandjerrytask.R
-import com.mustafa.tomandjerrytask.composable.HeaderJerryStore
-import com.mustafa.tomandjerrytask.composable.SearchAndFilter
 import com.mustafa.tomandjerrytask.ui.theme.DarkBlue
 import com.mustafa.tomandjerrytask.ui.theme.IBMPlexSansArabic
-import com.mustafa.tomandjerrytask.ui.theme.ScreenBackGround
 import com.mustafa.tomandjerrytask.ui.theme.SearchIconColor
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun JerryStoreScreen() {
-    Column(
+fun SearchAndFilter(){
+    Row(
         modifier = Modifier
-            .fillMaxSize()
-            .background(ScreenBackGround)
-            .padding(horizontal = 16.dp, vertical = 4.dp)
+            .fillMaxWidth()
+            .padding(top = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+
     ) {
-        HeaderJerryStore()
-        SearchAndFilter()
+        SearchBar(modifier = Modifier.weight(272f))
+
+        Box (modifier = Modifier
+            .weight(48f)
+            .clip(shape = RoundedCornerShape(12.dp))
+            .background(
+                DarkBlue
+            )) {
+            Icon(
+                modifier = Modifier
+                    .padding(12.dp)
+                    .align(Alignment.Center),
+                painter = painterResource(R.drawable.ic_filter),
+                tint = Color.White,
+                contentDescription = "search icon"
+            )
+        }
     }
 }
 
 @Preview
 @Composable
-fun PreviewJerryStoreScreen() {
-    JerryStoreScreen()
+fun PreviewSearchAndFilter(){
+    SearchAndFilter()
 }
