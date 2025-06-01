@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import com.mustafa.tomandjerrytask.screens.JerryStoreScreen
+import com.mustafa.tomandjerrytask.screens.TomKitchenScreen
 import com.mustafa.tomandjerrytask.ui.theme.TomAndJerryTaskTheme
 
 
@@ -14,7 +15,8 @@ import com.mustafa.tomandjerrytask.ui.theme.TomAndJerryTaskTheme
 fun TomAndJerryApp() {
     TomAndJerryTaskTheme {
         Scaffold (contentWindowInsets = WindowInsets.systemBars){
-            JerryStoreScreen()
+            //JerryStoreScreen()
+            TomKitchenScreen()
         }
     }
 }
