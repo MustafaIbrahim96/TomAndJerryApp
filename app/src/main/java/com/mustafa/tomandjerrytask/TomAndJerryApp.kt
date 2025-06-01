@@ -15,8 +15,8 @@ import com.mustafa.tomandjerrytask.ui.theme.TomAndJerryTaskTheme
 fun TomAndJerryApp() {
     TomAndJerryTaskTheme {
         Scaffold (contentWindowInsets = WindowInsets.systemBars){
-            //JerryStoreScreen()
-            TomKitchenScreen()
+            JerryStoreScreen()
+            //TomKitchenScreen()
         }
     }
 }

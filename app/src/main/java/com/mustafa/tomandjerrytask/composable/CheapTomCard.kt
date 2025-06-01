@@ -122,7 +122,7 @@ fun CheapTomCard(tomCharacter: TomCharacter) {
                             } else {
                                 Text(
                                     modifier = Modifier.padding(start = 4.dp),
-                                    text = "${tomCharacter.discountPrice} Cheeses",
+                                    text = "${tomCharacter.price} Cheeses",
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.W500,
                                     fontFamily = IBMPlexSansArabic,
@@ -151,9 +151,8 @@ fun CheapTomCard(tomCharacter: TomCharacter) {
                     }
                 }
             }
-
-
         }
+
         Box(modifier = Modifier.align(Alignment.TopCenter)) {
             Image(
                 modifier = Modifier.height(100.dp),
@@ -161,7 +160,6 @@ fun CheapTomCard(tomCharacter: TomCharacter) {
                 contentDescription = "tom banner",
             )
         }
-
     }
 }
 

@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -55,22 +56,27 @@ fun NotificationCard(notificationCount: Int) {
         if (notificationCount > 0) {
             Box(
                 modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .size(14.dp)
-                    .clip(CircleShape)
-                    .background(DarkBlue),
+                    .align(Alignment.TopEnd),
                 contentAlignment = Alignment.Center
             ) {
-                Text(
-                    text = notificationCount.toString(),
-                    color = Color.White,
-                    fontSize = 10.sp,
-                    fontWeight = FontWeight.W600,
-                    fontFamily = IBMPlexSansArabic,
-                    textAlign = TextAlign.Center,
+                Box(
                     modifier = Modifier
-                        .offset(y = (-4).dp).size(14.dp)
-                )
+                        .clip(CircleShape)
+                        .background(color = DarkBlue)
+                        .size(14.dp)
+                        .align(Alignment.TopEnd)
+                ) {
+                    Text(
+                        text = notificationCount.toString(),
+                        style = TextStyle(
+                            color = Color.White,
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.W600,
+                            fontFamily = IBMPlexSansArabic
+                        ),
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                }
             }
         }
     }
