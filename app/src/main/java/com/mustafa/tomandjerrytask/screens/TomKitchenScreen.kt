@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -50,6 +51,7 @@ fun TomKitchenScreen() {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
+                        modifier = Modifier.size(24.dp),
                         painter = painterResource(R.drawable.ic_high_tension),
                         contentDescription = "high tension icon",
                         tint = Color.White
@@ -60,7 +62,9 @@ fun TomKitchenScreen() {
                         color = Color.White,
                         fontSize = 16.sp,
                         fontFamily = IBMPlexSansArabic,
-                        fontWeight = FontWeight.W500
+                        fontWeight = FontWeight.W500,
+                        letterSpacing = 0.5.sp,
+                        lineHeight = 16.sp
                     )
                 }
                 Row(
@@ -68,6 +72,7 @@ fun TomKitchenScreen() {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
+                        modifier = Modifier.size(24.dp),
                         painter = painterResource(R.drawable.ic_shocking_foods),
                         contentDescription = "Shocking food icons",
                         tint = Color.White
@@ -78,7 +83,9 @@ fun TomKitchenScreen() {
                         color = Color.White,
                         fontSize = 16.sp,
                         fontFamily = IBMPlexSansArabic,
-                        fontWeight = FontWeight.W500
+                        fontWeight = FontWeight.W500,
+                        letterSpacing = 0.5.sp,
+                        lineHeight = 16.sp
                     )
                 }
             }
@@ -110,7 +117,9 @@ fun TomKitchenScreen() {
                             fontFamily = IBMPlexSansArabic,
                             fontWeight = FontWeight.W500,
                             fontSize = 20.sp,
-                            color = TitleTomKitchenColor
+                            color = TitleTomKitchenColor,
+                            lineHeight = 16.sp,
+                            letterSpacing = 0.5.sp
                         )
                         Card(
                             shape = RoundedCornerShape(8.dp),
@@ -155,9 +164,11 @@ fun TomKitchenScreen() {
             }
 
         }
-        Box(modifier = Modifier
-            .padding(top = 18.dp, end = 24.dp)
-            .align(Alignment.TopEnd)) {
+        Box(
+            modifier = Modifier
+                .padding(top = 18.dp, end = 24.dp)
+                .align(Alignment.TopEnd)
+        ) {
             Image(
                 painter = painterResource(R.drawable.img_electric_tom_pasta),
                 contentDescription = "image electric tom pasta"
