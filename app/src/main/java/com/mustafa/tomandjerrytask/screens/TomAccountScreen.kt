@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,22 +23,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mustafa.tomandjerrytask.R
-import com.mustafa.tomandjerrytask.ui.theme.DarkGray
+import com.mustafa.tomandjerrytask.ui.theme.ButtonAddToCardColor
 import com.mustafa.tomandjerrytask.ui.theme.IBMPlexSansArabic
 import com.mustafa.tomandjerrytask.ui.theme.ScreenBackGround
 import com.mustafa.tomandjerrytask.ui.theme.WhiteColor12A
 import com.mustafa.tomandjerrytask.ui.theme.WhiteColor80A
-import com.mustafa.tomandjerrytask.ui.theme.WhiteColor87A
 
 @Composable
 fun TomAccountScreen() {
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(modifier = Modifier.fillMaxSize().background(ButtonAddToCardColor)) {
         Box(modifier = Modifier) {
             Image(
                 modifier = Modifier
-                    .height(202.dp)
+                    .height(180.dp)
                     .fillMaxWidth(),
-                painter = painterResource(R.drawable.img_background_tom_account),
+                painter = painterResource(R.drawable.ic_background_tom_account),
                 contentDescription = "tom account bg",
                 contentScale = ContentScale.Crop
             )
