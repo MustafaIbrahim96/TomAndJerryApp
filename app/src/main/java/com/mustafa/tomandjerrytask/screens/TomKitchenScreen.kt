@@ -150,10 +150,10 @@ fun TomKitchenScreen() {
                             lineHeight = 16.sp,
                             letterSpacing = 0.5.sp
                         )
-                        Card(
-                            shape = RoundedCornerShape(8.dp),
-                            colors = CardDefaults.cardColors(ButtonCheeseTomKitchenColor),
-                            onClick = {},
+                        Box(
+                            modifier = Modifier.padding(top =12.dp )
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(ButtonCheeseTomKitchenColor)
                         ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
@@ -162,7 +162,7 @@ fun TomKitchenScreen() {
                                 Icon(
                                     modifier = Modifier.padding(
                                         start = 10.dp, top = 8.dp, bottom = 8.dp, end = 4.dp
-                                    ),
+                                    ).size(16.dp),
                                     painter = painterResource(R.drawable.ic_money_bag),
                                     contentDescription = "money bag icon",
                                     tint = DarkBlue
@@ -266,7 +266,7 @@ fun TomKitchenScreen() {
 fun DetailsScroll(modifier: Modifier) {
     Column(
         modifier = modifier
-            .padding(top = 6.dp, start = 16.dp, end = 16.dp)
+            .padding(top = 8.dp, start = 16.dp, end = 16.dp)
             .verticalScroll(rememberScrollState()),
 
         ) {

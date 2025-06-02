@@ -36,7 +36,7 @@ fun HeaderJerryStore() {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Row {
+        Row(verticalAlignment = Alignment.CenterVertically) {
             Image(
                 modifier = Modifier
                     .size(48.dp)

@@ -40,6 +40,7 @@ fun SearchAndFilter() {
 
         Card(
             modifier = Modifier
+                .padding(start = 4.dp)
                 .weight(48f)
                 .clip(shape = RoundedCornerShape(12.dp)),
             colors = CardDefaults.cardColors(DarkBlue),

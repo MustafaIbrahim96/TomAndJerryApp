@@ -27,7 +27,7 @@ fun JerryStoreScreen() {
         modifier = Modifier
             .fillMaxSize()
             .background(ScreenBackGround)
-            .padding(start = 12.dp, end = 12.dp, top = 6.dp,bottom = 12.dp)
+            .padding(start = 12.dp, end = 12.dp, top = 6.dp,bottom = 8.dp)
     ) {
         HeaderJerryStore()
         SearchAndFilter()

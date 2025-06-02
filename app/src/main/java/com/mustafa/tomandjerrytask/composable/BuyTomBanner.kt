@@ -48,7 +48,7 @@ fun BuyTomBanner() {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(12.dp))
+                .clip(RoundedCornerShape(16.dp))
                 .background(
                     brush = Brush.horizontalGradient(
                         colors = listOf(BgTomCard, LightBlue)
@@ -68,6 +68,7 @@ fun BuyTomBanner() {
                         text = stringResource(R.string.buy_1_tom_and_get_2_for_free),
                         fontSize = 16.sp,
                         fontWeight = FontWeight.W600,
+                        lineHeight = 16.sp,
                         fontFamily = IBMPlexSansArabic,
                         color = Color.White
                     )

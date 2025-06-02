@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -97,7 +98,7 @@ fun CheapTomCard(tomCharacter: TomCharacter) {
                                     top = 8.dp,
                                     bottom = 8.dp,
                                     end = 4.dp
-                                ),
+                                ).size(16.dp),
                                 painter = painterResource(R.drawable.ic_money_bag),
                                 contentDescription = "money bag icon",
                                 tint = DarkBlue
@@ -125,6 +126,7 @@ fun CheapTomCard(tomCharacter: TomCharacter) {
                                     text = "${tomCharacter.price} Cheeses",
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.W500,
+
                                     fontFamily = IBMPlexSansArabic,
                                     color = DarkBlue,
                                 )

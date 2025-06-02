@@ -3,6 +3,7 @@ package com.mustafa.tomandjerrytask.composable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -25,7 +26,7 @@ import com.mustafa.tomandjerrytask.ui.theme.SearchIconColor
 fun SearchBar(modifier: Modifier){
     Row(
         modifier = modifier
-            .padding(end = 8.dp)
+            .padding(end = 4.dp)
             .clip(shape = RoundedCornerShape(12.dp))
             .background(Color.White)
             .padding(12.dp),
@@ -35,7 +36,7 @@ fun SearchBar(modifier: Modifier){
             modifier = Modifier
                 .background(Color.White)
                 .padding()
-                .clipToBounds(),
+                .clipToBounds().size(24.dp),
             painter = painterResource(R.drawable.ic_search),
             contentDescription = "search icon",
             tint = SearchIconColor,
