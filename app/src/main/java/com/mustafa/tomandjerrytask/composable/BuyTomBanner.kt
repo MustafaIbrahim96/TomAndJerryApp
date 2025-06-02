@@ -24,6 +24,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -78,7 +80,7 @@ fun BuyTomBanner() {
                             color = WhiteColor80A,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.W400,
-                            fontFamily = IBMPlexSansArabic
+                            fontFamily = FontFamily(Font(R.font.ibm_plex_sans_arabic_w400))
                         )
                     )
 
