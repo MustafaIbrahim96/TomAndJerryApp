@@ -8,5 +8,6 @@ import com.mustafa.tomandjerrytask.R
 val IBMPlexSansArabic = FontFamily(
      Font(R.font.ibm_plex_sans_arabic_w400, FontWeight.Normal),
      Font(R.font.ibm_plex_sans_arabic_w500, FontWeight.Medium),
-     Font(R.font.ibm_plex_sans_arabic_w600, FontWeight.SemiBold)
+     Font(R.font.ibm_plex_sans_arabic_w600, FontWeight.SemiBold),
+     Font(R.font.ibm_plex_sans_arabic_w700, FontWeight.Bold)
 )
