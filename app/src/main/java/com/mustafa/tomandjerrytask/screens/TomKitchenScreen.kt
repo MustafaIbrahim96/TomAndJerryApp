@@ -78,7 +78,7 @@ fun TomKitchenScreen() {
                     Text(
                         modifier = Modifier.padding(start = 8.dp),
                         text = "High tension",
-                        color = Color.White,
+                        color = WhiteColor87A,
                         fontSize = 16.sp,
                         fontFamily = IBMPlexSansArabic,
                         fontWeight = FontWeight.W500,
@@ -99,7 +99,7 @@ fun TomKitchenScreen() {
                     Text(
                         modifier = Modifier.padding(start = 8.dp),
                         text = "Shocking foods",
-                        color = Color.White,
+                        color = WhiteColor87A,
                         fontSize = 16.sp,
                         fontFamily = IBMPlexSansArabic,
                         fontWeight = FontWeight.W500,
@@ -224,7 +224,7 @@ fun TomKitchenScreen() {
                                 fontSize = 14.sp,
                                 color = Color.White,
                                 letterSpacing = 0.5.sp,
-                                lineHeight = 16.sp
+                                lineHeight = 14.sp
                             )
                             Text(
                                 text = "5 cheeses",
@@ -233,7 +233,7 @@ fun TomKitchenScreen() {
                                 fontSize = 12.sp,
                                 color = Color.White,
                                 letterSpacing = 0.5.sp,
-                                lineHeight = 16.sp,
+                                lineHeight = 12.sp,
                                 textDecoration = TextDecoration.LineThrough,
                             )
                         }
@@ -300,7 +300,8 @@ fun DetailsScroll(modifier: Modifier) {
                     .weight(1f),
                 icon = painterResource(R.drawable.ic_temperature),
                 title = "1000 V",
-                subTitle = "Temperature"
+                subTitle = "Temperature",
+                iconColor = ColorIconDescription
             )
             CardDetails(
                 modifier = Modifier
@@ -308,7 +309,8 @@ fun DetailsScroll(modifier: Modifier) {
                     .weight(1f),
                 icon = painterResource(R.drawable.ic_timer),
                 title = "3 sparks",
-                subTitle = "Time"
+                subTitle = "Time",
+                iconColor = ButtonAddToCardColor
             )
             CardDetails(
                 modifier = Modifier
@@ -316,7 +318,8 @@ fun DetailsScroll(modifier: Modifier) {
                     .weight(1f),
                 icon = painterResource(R.drawable.ic_devil),
                 title = "1M 12K",
-                subTitle = "No. of deaths"
+                subTitle = "No. of deaths",
+                iconColor = ButtonAddToCardColor
             )
 
         }
@@ -402,7 +405,7 @@ fun CardPreparationMethod(title: String, numberOfPreparation: String) {
 }
 
 @Composable
-fun CardDetails(modifier: Modifier, icon: Painter, title: String, subTitle: String) {
+fun CardDetails(modifier: Modifier, icon: Painter, title: String, subTitle: String,iconColor:Color) {
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
@@ -420,7 +423,7 @@ fun CardDetails(modifier: Modifier, icon: Painter, title: String, subTitle: Stri
                     .width(32.dp),
                 painter = icon,
                 contentDescription = null,
-                tint = ColorIconDescription
+                tint = iconColor
             )
             Text(
                 modifier = Modifier.padding(top = 12.dp),

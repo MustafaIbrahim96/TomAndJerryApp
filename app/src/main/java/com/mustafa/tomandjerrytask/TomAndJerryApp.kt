@@ -17,8 +17,8 @@ fun TomAndJerryApp() {
     TomAndJerryTaskTheme {
         Scaffold (contentWindowInsets = WindowInsets.systemBars){
             //JerryStoreScreen()
-            //TomKitchenScreen()
-            TomAccountScreen()
+            TomKitchenScreen()
+            //TomAccountScreen()
 
         }
     }
